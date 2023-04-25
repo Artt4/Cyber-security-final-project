@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Website</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 10px;
+			margin-right: 10px;
+			background-color: #ddd;
+			color: #333;
+			text-decoration: none;
+			border-radius: 5px;
+		}
+
+		.button:hover {
+			background-color: #aaa;
+			color: #fff;
+		}
+
+		.success {
+			background-color: #d1e9dd;
+			padding: 20px;
+			border-radius: 5px;
+			margin: 20px auto;
+			max-width: 500px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.success h1 {
+			font-size: 24px;
+			margin-top: 0;
+		}
+
+		.success p {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<main>
+		<div class="success">
+			<h1>You are authenticated!</h1>
+			<p>Welcome {{ username }}</p>
+			<a href="/" class="button-back">Back to Home</a>
+		</div>
+	</main>
+</body>
+</html>
