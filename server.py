@@ -39,11 +39,9 @@ def login():
         if password_hash == stored_password_hash:
             return render_template('success.html', username=username)
         else:
-            # If the password is incorrect, return an error message to the HTML template
             error = "Invalid username or password. Please try again."
             return render_template('login.html', error=error)
     else:
-        # Render the login page
         return render_template('login.html')
 
 
@@ -57,7 +55,6 @@ def signup():
         cur.execute("SELECT * FROM users WHERE username=%s", (username,))
         user = cur.fetchone()
         if user:
-            # If username already exists, return an error message to the HTML template
             error = "Username already taken. Please choose a different username."
             return render_template('signup.html', error=error)
 
@@ -80,7 +77,6 @@ def signup():
         success = 'User created successfully!'
         return render_template('signup.html', success = success)
     else:
-        # Render the signup page
         return render_template('signup.html')
 
 
